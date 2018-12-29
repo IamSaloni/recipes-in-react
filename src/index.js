@@ -28,7 +28,9 @@ class Print extends React.Component {
                     placeholder="Enter Name"
                     onChange={() => this.handleChange(event)}
                 />
-                <p>Hello {this.state.name}</p>
+                <p className={this.state.name==="Saloni"?"bg-green":''} >
+                    Hello {this.state.name}
+                </p>
             </div>
         )
     }
