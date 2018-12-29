@@ -1,10 +1,14 @@
-import React from 'react'
-import Greetings from "./components/greetings";
+import React, {Component,Fragment} from 'react'
+import Greetings from "./components/Greetings";
+import Banner from "./components/Banner"
 
-class App extends React.Component {
+class App extends Component {
     render(){
         return (
-            <Greetings name="Customer " />
+            <Fragment>
+                <Greetings name="Customer " />
+                <Banner />
+            </Fragment>
         )
     }
 }
