@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import ReactDOM from 'react-dom'
 
 class Print extends React.Component {
@@ -16,8 +16,3 @@ ReactDOM.render (
  );
 
 
-// ReactDOM.render (
-//    React.createElement('h1', {className: 'kk' }, 'hello saloni'),document.getElementById('root')
-// );
-
-// React.createElement('h1', {className: 'kk' }, 'hello gugu')
