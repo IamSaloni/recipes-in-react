@@ -6,8 +6,8 @@ class App extends Component {
     render(){
         return (
             <Fragment>
-                <Greetings name="Customer " />
                 <Banner />
+                <Greetings name="Customer " />
             </Fragment>
         )
     }
