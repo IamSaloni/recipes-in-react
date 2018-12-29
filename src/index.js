@@ -1,11 +1,11 @@
 import React, {Fragment} from 'react'
 import ReactDOM from 'react-dom'
-import Greetings from './components/greetings'
+import App from './App'
 
 
 
 ReactDOM.render (
-    <Greetings name="Customer" />,document.getElementById('root')
+    <App />,document.getElementById('root')
  );
 
 
