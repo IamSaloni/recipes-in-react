@@ -6,8 +6,10 @@ class Note extends React.Component {
         return (
             <div className="sticky">
                 <h1 >Sticky Note </h1>
-                <button id="edit"><FaRegEdit /></button>
-                <button id="remove"><FaTrash /></button>
+                <span className="action-btns">
+                    <button id="edit"><FaRegEdit /></button>
+                    <button id="remove"><FaTrash /></button>
+                </span>
             </div>
         )
 }
