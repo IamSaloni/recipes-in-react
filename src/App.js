@@ -2,6 +2,8 @@ import React, {Component,Fragment} from 'react'
 import Greetings from "./components/Greetings";
 import Banner from "./components/Banner"
 import Checkbox from "./components/Checkbox"
+import Note from "./components/Note"
+
 
 class App extends Component {
     render(){
@@ -10,6 +12,7 @@ class App extends Component {
                 <Banner firstName="Saloni" lastName="Sharma" hometown="Amritsar" />
                 <Greetings name="Customer " />
                 <Checkbox />
+                <Note />
             </Fragment>
         )
     }
