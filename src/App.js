@@ -7,7 +7,7 @@ import Note from "./components/Note"
 
 class App extends Component {
     render(){
-        return (
+       return (
             <Fragment>
                 <Banner firstName="Saloni" lastName="Sharma" hometown="Amritsar" />
                 <Greetings name="Customer " />
