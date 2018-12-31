@@ -41,7 +41,7 @@ class Note extends React.Component {
     renderDisplay() {
         return (
             <div className="sticky">
-                <p>Sticky Note</p>
+                <p>{this.props.children}</p>
                 <span className="action-btns">
                     <button onClick={this.edit} id="edit"><FaEdit /></button>
                     <button onClick={this.remove} id="remove"><FaTrash /></button>
