@@ -10,6 +10,7 @@ class Note extends React.Component {
         }
         this.edit=this.edit.bind(this)
         this.remove=this.remove.bind(this)
+        this.save=this.save.bind(this)
         this.renderForm=this.renderForm.bind(this)
         this.renderDisplay=this.renderDisplay.bind(this)
     }
@@ -22,13 +23,16 @@ class Note extends React.Component {
     remove() {
         alert('removing Note')
     }
+    save() {
+        alert(this._newText.value)
+    }
 
     renderForm() {
         return(
             <div className="sticky">
             <form>
-            <textarea />
-            <button style={{backgroundColor:'pink'}}><FaWpforms /></button>
+            <textarea ref={input => this._newText=input} />
+            <button style={{backgroundColor:'pink'}}  onClick={this.save}><FaWpforms /></button>
             </form>
            </div>
 
@@ -46,11 +50,7 @@ class Note extends React.Component {
         )
     }
     render() {
-        if(this.state.editing) {
-            return this.renderForm()
-        }else {
-            return this.renderDisplay()
-        }
+       return this.state.editing ? this.renderForm() : this.renderDisplay()
     }
 }
     
