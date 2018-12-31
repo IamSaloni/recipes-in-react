@@ -3,6 +3,7 @@ import Greetings from "./components/Greetings";
 import Banner from "./components/Banner"
 import Checkbox from "./components/Checkbox"
 import Board from "./components/Board"
+import Lifecycle from "./components/Lifecycle"
 
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Greetings name="Customer " />
                 <Checkbox />
                 <Board />
+                <Lifecycle />
             </Fragment>
         )
     }
