@@ -28,7 +28,7 @@ class Board extends React.Component {
         console.log('update item at index', i, newText)
         this.setState(prevState => ({
             Notes: prevState.Notes.map(
-                note => (note.id !== i)? note :  {id:101, note: newText}
+                note => (note.id !== i)? note :  {id:note.id, note: newText}
             )
         }))
     }
