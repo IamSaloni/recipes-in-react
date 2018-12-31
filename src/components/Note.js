@@ -23,16 +23,20 @@ class Note extends React.Component {
     remove() {
         alert('removing Note')
     }
-    save() {
-        alert(this._newText.value)
+    save(e) {
+        e.preventDefault()
+        this.props.onChange(this._newText.value, this.props.index)
+        this.setState({
+            editing:false
+        })
     }
 
     renderForm() {
         return(
             <div className="sticky">
-            <form>
+            <form onSubmit={this.save}>
             <textarea ref={input => this._newText=input} />
-            <button style={{backgroundColor:'pink'}}  onClick={this.save}><FaWpforms /></button>
+            <button style={{backgroundColor:'pink'}} ><FaWpforms /></button>
             </form>
            </div>
 
