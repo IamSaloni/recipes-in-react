@@ -28,7 +28,7 @@ class Board extends React.Component {
         console.log('update item at index', i, newText)
         this.setState(prevState => ({
             Notes: prevState.Notes.map(
-                note => (note.id !== i)? note :  {...note, note: newText}
+                note => (note.id !== i)? note :  {id:101, note: newText}
             )
         }))
     }
@@ -36,8 +36,7 @@ class Board extends React.Component {
         eachNote(note, i){
             return (
                 <Note key={i}
-                    index={i}>
-                    onChange={this.update}
+                    index={i} onChange={this.update} >
                     {note.note}</Note>
             )
         }
