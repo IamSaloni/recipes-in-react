@@ -23,6 +23,7 @@ class Board extends React.Component {
         }
         this.eachNote=this.eachNote.bind(this)
         this.update=this.update.bind(this)
+        this.remove=this.remove.bind(this)
     }
     update(newText,i) {
         console.log('update item at index', i, newText)
@@ -33,10 +34,18 @@ class Board extends React.Component {
         }))
     }
 
+        remove(id) {
+            console.log('remove item at', id)
+            this.setState(prevState => ({
+                Notes: prevState.Notes.filter(note => note.id !==id)
+            }))
+        }
+
         eachNote(note, i){
             return (
                 <Note key={i}
-                    index={i} onChange={this.update} >
+                    index={i} onChange={this.update} 
+                            onRemove={this.remove}>
                     {note.note}</Note>
             )
         }

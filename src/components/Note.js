@@ -21,7 +21,7 @@ class Note extends React.Component {
        })
     }
     remove() {
-        alert('removing Note')
+        this.props.onRemove(this.props.index)
     }
     save(e) {
         e.preventDefault()
