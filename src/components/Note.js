@@ -24,7 +24,7 @@ class Note extends React.Component {
         this.props.onRemove(this.props.index)
     }
     save(e) {
-        e.preventDefault()
+        e.preventDefault();
         this.props.onChange(this._newText.value, this.props.index)
         this.setState({
             editing:false
@@ -34,17 +34,18 @@ class Note extends React.Component {
     renderForm() {
         return(
             <div className="sticky">
-            <form onSubmit={this.save}>
+            <form action="POST" onSubmit={this.save}>
             <textarea ref={input => this._newText=input} />
-            <button style={{backgroundColor:'pink'}} ><FaWpforms /></button>
+            <button id="save" style={{backgroundColor:'pink'}} ><FaWpforms /></button>
             </form>
            </div>
 
         )
     }
+
     renderDisplay() {
         return (
-            <div className="sticky">
+            <div className="sticky" >
                 <p>{this.props.children}</p>
                 <span className="action-btns">
                     <button onClick={this.edit} id="edit"><FaEdit /></button>

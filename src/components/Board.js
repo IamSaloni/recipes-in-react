@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Note from './Note'
-import {FaFolderPlus} from 'react-icons/fa'
+import {MdClose} from 'react-icons/md'
 
 class Board extends React.Component {
     constructor(props){
@@ -16,10 +16,23 @@ class Board extends React.Component {
         this.nextId=this.nextId.bind(this)
     }
 
+    
+componentWillMount() {
+      var self = this
+      if(this.props.count){
+          fetch(`https://baconipsum.com/api/?type=all-meat&sentences=${this.props.count}`)
+          .then(response => response.json())
+            .then(json => json[0].split('. ').forEach(sentence => {
+              self.add(sentence) 
+            })   )
+        }
+
+    }
+    
     add(text) {
         this.setState(prevState => ({
             Notes: [
-                ...prevState.Notes, 
+                ...prevState.Notes,
                 {
                     id:this.nextId(),
                     note:text
@@ -51,7 +64,7 @@ class Board extends React.Component {
         eachNote(note, i){
             return (
                 <Note key={i}
-                    index={i} onChange={this.update} 
+                    index={note.id} onChange={this.update} 
                             onRemove={this.remove}>
                     {note.note}</Note>
             )
@@ -60,7 +73,7 @@ class Board extends React.Component {
         return (
             <div className="board">
                 {this.state.Notes.map(this.eachNote)}
-                <button onClick={this.add.bind(null,"New Note")} id="add"><FaFolderPlus /></button>
+                <button onClick={this.add.bind(null,"New Note")} id="add"><MdClose /></button>
             </div>
         )
     }

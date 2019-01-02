@@ -3,8 +3,23 @@
     <head>
         <title>My react app</title>
         <meta charset="UTF-8" />
+        <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
         <style>
-         
+            textarea {
+                border: 0;
+                width: 148px;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+         button {
+            width: 30px;
+            height: 30px;
+            background-color: antiquewhite;
+            border: 0;
+            font-size: 15px;
+            border-radius: 50%;
+         }
+
          .sticky{
             position: relative;
             display:inline-block;
@@ -13,7 +28,15 @@
             height: 200px;
             padding: 10px;
             margin: 10px;
+            border-radius: 10px;
+            border:1px solid #020202;
          }
+        .sticky p {
+            font-family: 'Sacramento', cursive;
+            font-size: 20px;
+            margin: 10px 0px;
+        }
+
          .action-btns {
             position: absolute;
             bottom: 5px;
@@ -27,13 +50,20 @@
 
         #remove {
             background-color: lightcoral;
-            
         }
         /* .board {
             background-color: bisque;
         } */
         #add{
-            background-color: blue;
+            width: 48px;
+            height: 48px;
+            background-color: antiquewhite;
+            font-size: 20px;
+            transform: rotate(45deg);
+            border: 1px solid black;
+        }
+        button#save{
+            margin-top:5px
         }
         .react-life {
             background-color: blue;
@@ -42,7 +72,7 @@
             margin : 10px;
         }
         </style>
-
+    
     </head>
     <body>
         <div id="root"></div>

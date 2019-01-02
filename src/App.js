@@ -11,10 +11,10 @@ class App extends Component {
        return (
             <Fragment>
                 <Banner firstName="Saloni" lastName="Sharma" hometown="Amritsar" />
-                <Greetings name="Customer " />
-                <Checkbox />
-                <Board />
-                <Lifecycle />
+                {/* <Greetings name="Customer " /> */}
+                {/* <Checkbox /> */}
+                <Board count={40}/>
+                {/* <Lifecycle /> */}
             </Fragment>
         )
     }
