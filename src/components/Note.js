@@ -41,6 +41,7 @@ class Note extends React.Component {
            </div>
 
         )
+
     }
 
     renderDisplay() {
