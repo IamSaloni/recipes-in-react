@@ -13,7 +13,7 @@ class App extends Component {
                 <Banner firstName="Saloni" lastName="Sharma" hometown="Amritsar" />
                 {/* <Greetings name="Customer " /> */}
                 {/* <Checkbox /> */}
-                <Board count={40}/>
+                <Board count={20}/>
                 {/* <Lifecycle /> */}
             </Fragment>
         )

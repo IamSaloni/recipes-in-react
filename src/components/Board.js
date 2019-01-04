@@ -61,7 +61,7 @@ componentWillMount() {
         
         eachNote(note, i){
             return (
-                <Note key={i}
+                <Note key={note.id}
                     index={note.id} onChange={this.update} 
                             onRemove={this.remove}>
                     {note.note}</Note>
