@@ -14,6 +14,7 @@ class Note extends React.Component {
         this.renderForm=this.renderForm.bind(this)
         this.renderDisplay=this.renderDisplay.bind(this)
     }
+
     
     edit() {
        this.setState({
