@@ -4,6 +4,7 @@ import Banner from "./components/Banner"
 import Checkbox from "./components/Checkbox"
 import Board from "./components/Board"
 import Billtrim from "./Billtrim"
+import Card from "./components/Card"
 
 
 
@@ -33,12 +34,13 @@ class App extends Component {
         console.log(this.state)
        return (
             <Fragment>
-                <Banner firstName={this.state.name.firstName} lastName={this.state.name.lastName} hometown="Amritsar" />
+                {/* <Banner firstName={this.state.name.firstName} lastName={this.state.name.lastName} hometown="Amritsar" /> */}
                 {/* <Greetings name="Customer " />  */}
                 {/* <Checkbox /> */}
                 {/* <Board count={20}/> */}
                 {/* <Lifecycle /> */}
                 {/* <Billtrim /> */}
+                <Card />
             </Fragment>
         )
     }
