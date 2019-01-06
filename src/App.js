@@ -19,8 +19,6 @@ class App extends Component {
             }
         }
     }
-  
-
     componentDidMount(){
         fetch(`http://localhost:8080/src/data.json`)
         .then(response => response.json())

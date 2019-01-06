@@ -29,7 +29,7 @@ class Card extends React.Component {
                     <img src={this.state.avatar_url}/>
                     <h1>
                         <span>{this.state.name}</span>
-                        <span>{this.state.company}</span>
+                        <span >{this.state.company}</span>
                     </h1>
                 </div>
             )
